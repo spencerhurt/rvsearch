@@ -52,6 +52,7 @@ def run_search(args):
 
     searcher = rvsearch.search.Search(data, starname=starname,
                                       min_per=args.minP,
+                                      max_per=args.maxP,
                                       workers=args.num_cpus,
                                       post=post,
                                       trend=args.trend,
