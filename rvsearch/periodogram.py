@@ -55,7 +55,7 @@ class Periodogram(object):
     """
 
     def __init__(self, post, basebic=None, minsearchp=3, maxsearchp=10000,
-                 baseline=True, basefactor=5., oversampling=1., manual_grid=None,
+                 baseline=True, basefactor=1., oversampling=1., manual_grid=None,
                  fap=0.001, num_pers=None, eccentric=False, workers=1,
                  verbose=True):
         self.post = copy.deepcopy(post)
@@ -91,7 +91,7 @@ class Periodogram(object):
 
         self.eccentric = eccentric
 
-        if self.baseline == True:
+        if (self.maxsearchP == None) and (self.baseline == True):
             self.maxsearchP = self.basefactor * self.timelen
 
         self.valid_types = ['bic', 'aic', 'ls']
