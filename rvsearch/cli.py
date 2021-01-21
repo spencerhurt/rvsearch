@@ -53,10 +53,10 @@ def main():
                           type=float, action='store', default=1.2,
                           help="Minimum search period [default=1.2]"
                           )
-    # psr_search.add_argument('--maxP',
-    #                       type=float, action='store', default=1e4,
-    #                       help="Maximum search period [default=10000]"
-    #                       )
+    psr_search.add_argument('--maxP',
+                          type=float, action='store', default=1e4,
+                          help="Maximum search period [default=10000]"
+                          )
     psr_search.add_argument('--known', action='store_true',
                           help="Include previously known planets [default=False]"
                           )
